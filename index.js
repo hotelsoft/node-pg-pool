@@ -71,7 +71,7 @@ Pool.prototype.connect = function (cb) {
           this.pool.release(client)
         }
       }.bind(this)
-      this.pool.emit('pool.connect', client)
+      this.emit('pool.connect', client)
 
       if (cb) {
         cb(null, client, client.release)
